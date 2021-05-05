@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triangel</title>
+
+    <style>
+        .dialog-box {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background-color: #A7A7DB;
+            border-radius: 10px;
+            text-align: center;
+            line-height: 100px;
+            color: white;
+
+            margin: 50px;
+        }
+
+        .dialog-box.triangle-down::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-width: 15px;
+            border-color: #A7A7DB transparent transparent transparent;
+            border-style: solid dashed dashed dashed;
+            display: block;
+            position: absolute;
+            top: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .dialog-box.triangle-top::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-width: 15px;
+            border-color:  transparent transparent #A7A7DB transparent ;
+            border-style:  dashed dashed solid dashed ;
+            display: block;
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        .dialog-box.triangle-right::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-width: 15px;
+            border-color:  transparent transparent transparent #A7A7DB;
+            border-style:  dashed dashed dashed solid;
+            display: block;
+            position: absolute;
+            right: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        
+        .dialog-box.triangle-left::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-width: 15px;
+            border-color: transparent #A7A7DB  transparent transparent;
+            border-style:  dashed solid dashed dashed;
+            display: block;
+            position: absolute;
+            left: -30px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dialog-box triangle-down">
+        Point down
+    </div>
+
+    <div class="dialog-box triangle-top">
+        Point up
+    </div>
+
+    <div class="dialog-box triangle-right">
+        Point right
+    </div>
+
+    <div class="dialog-box triangle-left">
+        Point left
+    </div>
+
+</body>
+
+</html>
